@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="larase-brand-kit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/public/brand/larase-brand-kit.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
