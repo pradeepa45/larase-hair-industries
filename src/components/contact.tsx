@@ -1,5 +1,5 @@
-import { useState, type FormEvent } from "react";
-import { ExternalLink, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { type FormEvent, useState } from "react";
+import { ExternalLink, GlobeIcon, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { COMPANY, mapsEmbedSrc, whatsappUrl } from "@/lib/site";
 
 export function ContactSection() {
@@ -21,10 +21,10 @@ export function ContactSection() {
       "",
       message,
     ].join("\n");
-    const mailto = `mailto:${COMPANY.email}?subject=${encodeURIComponent(
+
+    window.location.href = `mailto:${COMPANY.email}?subject=${encodeURIComponent(
       `Enquiry from ${name || "website"} — ${interest || "hair"}`,
     )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
     setSent(true);
   }
 
@@ -35,8 +35,8 @@ export function ContactSection() {
           <p className="text-xs tracking-[0.28em] text-accent uppercase">Visit & enquire</p>
           <h2 className="mt-3 text-4xl text-fg md:text-5xl">Get in touch</h2>
           <p className="mt-4 text-muted">
-            Factory and registered office in Bharatpet, Guntur. Call, write, or send an enquiry for wholesale
-            and export lots.
+            Factory and registered office in Bharatpet, Guntur. Call, write, or send an enquiry for
+            wholesale and export lots.
           </p>
         </div>
 
@@ -49,7 +49,9 @@ export function ContactSection() {
                     <MapPin className="size-4" strokeWidth={1.6} />
                   </span>
                   <div>
-                    <p className="text-xs tracking-[0.16em] text-muted uppercase">Registered office</p>
+                    <p className="text-xs tracking-[0.16em] text-muted uppercase">
+                      Registered office
+                    </p>
                     <a
                       href={COMPANY.address.mapsUrl}
                       target="_blank"
@@ -83,7 +85,10 @@ export function ContactSection() {
                   </span>
                   <div>
                     <p className="text-xs tracking-[0.16em] text-muted uppercase">Email</p>
-                    <a href={`mailto:${COMPANY.email}`} className="mt-1 block break-all hover:text-accent">
+                    <a
+                      href={`mailto:${COMPANY.email}`}
+                      className="mt-1 block break-all hover:text-accent"
+                    >
                       {COMPANY.email}
                     </a>
                   </div>
@@ -100,7 +105,25 @@ export function ContactSection() {
                       rel="noreferrer"
                       className="mt-1 block hover:text-accent"
                     >
-                      Chat on WhatsApp — {COMPANY.phones[0].display}
+                      Chat on WhatsApp — {COMPANY.phones[1].display}
+                    </a>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-md bg-accent-soft text-accent">
+                    <GlobeIcon className="size-4" strokeWidth={1.6} />
+                  </span>
+                  <div>
+                    <p className="text-xs tracking-[0.16em] text-muted uppercase">
+                      Our website
+                    </p>
+                    <a
+                      href={COMPANY.website.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 block leading-relaxed hover:text-accent"
+                    >
+                      {COMPANY.website.display}
                     </a>
                   </div>
                 </li>

@@ -15,7 +15,7 @@
   --color-border: #e0d6c8;
   --color-border-deep: #2c2521;
   --color-pin: #c43936;
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
+  --font-display: "Merryweather", ui-serif, Georgia, "Times New Roman", serif;
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -38,7 +38,7 @@
   body {
     background: var(--color-bg);
     color: var(--color-fg);
-    font-family: var(--font-sans);
+    font-family: var(--font-sans), sans-serif;
     line-height: 1.55;
   }
 
@@ -46,7 +46,7 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-display);
+    font-family: var(--font-display), serif;
     text-wrap: balance;
     letter-spacing: -0.02em;
     line-height: 1.12;
@@ -78,7 +78,7 @@
 
 @layer utilities {
   .font-display {
-    font-family: var(--font-display);
+    font-family: var(--font-display), serif;
   }
 }
 

@@ -3,12 +3,17 @@ export const COMPANY = {
   shortName: "LARASE",
   tagline: "Beauty in every strand. Integrity in every bundle.",
   established: "2024",
-  cin: "U32904AP2024PTC115098",
-  gst: "37AAFCL8708G1ZA",
-  iec: "AAFCL8708G",
-  pan: "AAFCL8708G",
+  // cin: "U32904AP2024PTC115098",
+  cin: "xxxxxxxxxxxxxxxxx5098",
+  // gst: "37AAFCL8708G1ZA",
+  gst: "xxxxxxxxxxxGIZA",
+  // iec: "AAFCL8708G",
+  iec: "xxxxxx708G",
+  // pan: "AAFCL8708G",
+  pan: "xxxxxx708G",
   roc: "RoC Vijayawada",
-  email: "larasehair.industries@gmail.com",
+  // email: "larasehair.industries@gmail.com",
+  email: "info@larasehair.com",
   phones: [
     { display: "+91 99897 19999", tel: "+919989719999", digits: "919989719999" },
     { display: "+91 91157 19999", tel: "+919115719999", digits: "919115719999" },
@@ -28,6 +33,10 @@ export const COMPANY = {
     { code: "05010010", label: "Human hair, unworked" },
     { code: "05010020", label: "Human hair, worked / processed" },
   ],
+  website: {
+    display: "www.larasehair.com",
+    url: "https://larasehair.com",
+  },
 } as const;
 
 export const NAV = [
@@ -173,7 +182,7 @@ export const PROMISES = [
 ] as const;
 
 export function whatsappUrl(text?: string) {
-  const base = `https://wa.me/${COMPANY.phones[0].digits}`;
+  const base = `https://wa.me/${COMPANY.phones[1].digits}`;
   if (!text) return base;
   return `${base}?text=${encodeURIComponent(text)}`;
 }
