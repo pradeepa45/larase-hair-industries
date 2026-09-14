@@ -1,6 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import faviconUrl from "../assets/favicon.svg";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -17,7 +18,7 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#16110F" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: faviconUrl },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -33,6 +34,7 @@ export const Route = createRootRoute({
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
         <HeadContent />
+        <title>Larase Hair</title>
       </head>
       <body className="bg-bg text-fg font-sans">
         <PreviewHostBridge />
