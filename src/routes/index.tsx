@@ -23,7 +23,7 @@ function Home() {
         href={whatsappUrl("Hello Larase, I would like to enquire about hair lots.")}
         target="_blank"
         rel="noreferrer"
-        className="fixed right-4 bottom-5 z-40 inline-flex min-h-12 items-center gap-2 rounded-full bg-fg px-4 text-sm text-bg shadow-[var(--shadow-border)] transition-transform duration-150 hover:bg-accent hover:text-fg-on-deep active:scale-[0.96] md:right-6"
+        className="fixed right-4 bottom-5 z-40 inline-flex min-h-12 items-center gap-2 rounded-full bg-fg px-4 text-sm text-bg shadow-[var(--shadow-border)] transition-transform duration-150 hover:bg-accent hover:text-fg-on-deep active:scale-[0.96] md:right-6 border-1 border-accent"
         aria-label="Chat on WhatsApp"
       >
         WhatsApp

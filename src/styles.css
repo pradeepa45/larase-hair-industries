@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/*noinspection ALL*/
 @theme {
   --color-bg: #f3ede4;
   --color-bg-deep: #16110f;
@@ -9,9 +10,9 @@
   --color-fg-on-deep: #f6f0e8;
   --color-muted: #7a6e64;
   --color-muted-on-deep: #b8a99c;
-  --color-accent: #6e2c35;
-  --color-accent-hover: #5a232b;
-  --color-accent-soft: #f0e4e2;
+  --color-accent: #8B6220;
+  --color-accent-hover: #D29737;
+  --color-accent-soft: #fbf7f1;
   --color-border: #e0d6c8;
   --color-border-deep: #2c2521;
   --color-pin: #c43936;
