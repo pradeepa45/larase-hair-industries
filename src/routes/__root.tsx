@@ -3,6 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import faviconUrl from "../assets/favicon.svg";
 import appCss from "../styles.css?url";
+import { Analytics } from "@vercel/analytics/react";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -37,11 +38,12 @@ export const Route = createRootRoute({
         <title>Larase Hair</title>
       </head>
       <body className="bg-bg text-fg font-sans">
-        <PreviewHostBridge />
-        <AuthProvider>
-          <Outlet />
-        </AuthProvider>
-        <Scripts />
+        <Analytics />
+          <PreviewHostBridge />
+          <AuthProvider>
+            <Outlet />
+          </AuthProvider>
+          <Scripts />
       </body>
     </html>
   ),
